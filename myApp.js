@@ -19,13 +19,15 @@ console.log("Hello World");
 
 
 /** 3) Serve an HTML file */
-var path = __dirname + "/views/index.html";
+var view_path = __dirname + "/views/index.html";
 app.get('/', (req, res) => {
-    res.sendFile(path);
+    res.sendFile(view_path);
 })
 
 
 /** 4) Serve static assets  */
+var public_path = __dirname + "/public";
+app.use(express.static(public_path));
 
 
 /** 5) serve JSON on a specific route */
