@@ -32,9 +32,9 @@ app.use(express.static(public_path));
 
 /** 5) serve JSON on a specific route */
 app.get('/json', (req, res) => {
-    let data = [{
+    let data = {
         "message": "Hello json"
-    }]
+    }
 
     res.json(data);
 })
