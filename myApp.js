@@ -36,7 +36,12 @@ app.get('/json', (req, res) => {
         "message": "Hello json"
     }
 
-    res.json(data);
+    if(process.env.MESSAGE_STYLE == "uppercase") {
+        res.json(data.message.toUpperCase())
+    }else{
+        res.json(data.message);
+    }
+
 })
 
 /** 6) Use the .env file to configure the app */
