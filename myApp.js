@@ -82,11 +82,11 @@ app.get("/:word/echo", (req, res) => {
 /** 10) Get input from client - Query parameters */
 // /name?first=<firstname>&last=<lastname>
 app.get("/name", (req, res) => {
-    let firstname = req.query.firstname
-    let lastname = req.query.lastname
+    let first = req.query.firstname
+    let last = req.query.lastname
 
     res.send({
-        name: firstname + " " + lastname
+        name: first + " " + last
     })
 })
   
