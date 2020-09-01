@@ -60,7 +60,13 @@ function logger(req, res, next) {
 }
 
 /** 8) Chaining middleware. A Time server */
+app.get("/now", (req, res, next) => {
+    req.time = Date().toString();
 
+    next()
+}, (req, res) => {
+    res.json("Time: " + req.time);
+})
 
 /** 9)  Get input from client - Route parameters */
 
