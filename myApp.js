@@ -1,6 +1,9 @@
 
 var express = require('express');
+const dotenv = require("dotenv");
 var app = express();
+
+dotenv.config();
 
 // --> 7)  Mount the Logger middleware here
 
