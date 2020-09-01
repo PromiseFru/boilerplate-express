@@ -43,9 +43,10 @@ app.get('/json', env);
 /** 6) Use the .env file to configure the app */
  function env(req, res){
     if(process.env.MESSAGE_STYLE === "uppercase") {
-        res.json(data.message.toUpperCase())
+        data.message = data.message.toUpperCase()
+        res.json(data)
     }else{
-        res.json(data.message);
+        res.json(data);
     }
 }
  
